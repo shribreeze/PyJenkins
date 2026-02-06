@@ -22,9 +22,10 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                sh 'venv/bin/pytest -v'
+                sh 'PYTHONPATH=. venv/bin/pytest -v'
             }
         }
+
     }
 
     post {
